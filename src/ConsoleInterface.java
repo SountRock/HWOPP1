@@ -39,7 +39,7 @@ public class ConsoleInterface {
     }
 
     /**
-     * Метод обеспечивает выполнение не базовых комманд
+     * Метод обеспечивает выполнение НЕ базовых комманд
      */
     public void otherCommand(String[] commamd){}
 

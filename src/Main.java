@@ -6,13 +6,13 @@ public class Main {
         //Account account = new Account("Anton");
         //account.putAmount(2000.0);
         //System.out.println(account.takeAmount(2000.0));
-        //account.commandUp();
+        //account.commandUp(); //запускает диалог в консоле
 
         //CreditAccount creditAccount = new CreditAccount("Vlad", 1000);
-        //creditAccount.commandUp();
+        //creditAccount.commandUp(); //запускает диалог в консоле
 
-        DepositAccount depositAccount = new DepositAccount(1000,"Vlad");
-        depositAccount.commandUp();
+        //DepositAccount depositAccount = new DepositAccount(1000,"Vlad");
+        //depositAccount.commandUp(); //запускает диалог в консоле
 
     }
 
