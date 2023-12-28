@@ -3,9 +3,9 @@
  * Имеет 3 метода: пополнение(putAmount) и снятие(takeAmount) средств и отображение(getAmount) текущего баланса (геттер).
  * Первые два меняют баланс, последний просто возвращает его.
  */
-public class Account extends ConsoleInterface{
-    protected double money;
-    protected String owner;
+public class Account extends ConsoleInterface implements Adder{
+    private double money;
+    private String owner;
 
     public String getOwner() {
         return owner;
@@ -31,13 +31,18 @@ public class Account extends ConsoleInterface{
      * Ложит деньги на счет
      */
     public void putAmount(double plus){
-       money += plus;
+        if(plus > 0){
+            money += plus;
+        }
     }
 
     /**
      * Снимает деньги со счета, если это возможно
      */
    public boolean takeAmount(double minus){
+       if(minus < 0){
+           minus = minus * (-1);
+       }
        double result = money - minus;
        if(result >= 0.0){
            money = result;

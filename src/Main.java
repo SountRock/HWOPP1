@@ -3,10 +3,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
-        //Account account = new Account("Anton");
+        Account account = new Account("Anton");
         //account.putAmount(2000.0);
         //System.out.println(account.takeAmount(2000.0));
-        //account.commandUp(); //запускает диалог в консоле
+        //account.putAmount(account.adder(account.getAmount()));
+        account.commandUp(); //запускает диалог в консоле
 
         //CreditAccount creditAccount = new CreditAccount("Vlad", 1000);
         //creditAccount.commandUp(); //запускает диалог в консоле

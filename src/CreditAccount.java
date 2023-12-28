@@ -4,31 +4,25 @@
  */
 
 public class CreditAccount extends Account{
-    private double debt;
-    final private double daseSumm;
+    private double accesMoney;
+    private final double daseSumm;
 
     public CreditAccount(String owner, double daseSumm) {
         super(owner);
         this.daseSumm = daseSumm;
-        this.money = this.daseSumm;
+        this.accesMoney = this.daseSumm;
     }
 
     @Override
     public boolean takeAmount(double minus){
-        double result = money - minus - (1.0 * minus / 100.0);
-        if(result >= 0.0){
-            money = result;
-            return true;
-        } else {
-            return false;
-        }
+       return super.takeAmount(minus - (1.0 * minus / 100.0));
     }
 
     /**
      * Возвращает значение денежного долга
      */
     public double getDebt(){
-        return daseSumm - money;
+        return daseSumm - accesMoney;
     }
 
     @Override

@@ -1,7 +1,9 @@
 import java.io.IOException;
 import java.util.Scanner;
-
-public class ConsoleInterface {
+/**
+ * Класс обеспечивающий консольный диалог
+ */
+public abstract class ConsoleInterface {
 
     public ConsoleInterface() {}
 
@@ -41,11 +43,11 @@ public class ConsoleInterface {
     /**
      * Метод обеспечивает выполнение НЕ базовых комманд
      */
-    public void otherCommand(String[] commamd){}
+    public abstract void otherCommand(String[] commamd);
 
     /**
      * Метод выводящий инструкцию поясняющий как пользоваться коммандами
      */
-    public void instruction(){}
+    public abstract void instruction();
 }
 
